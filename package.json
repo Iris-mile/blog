@@ -5,7 +5,8 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "dev1": "vuepress dev docs --temp .temp",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
   },
   "repository": "git@github.com:Iris-mile/mytest.git",
   "author": "Iris-mile <1296820437@qq.com>",
