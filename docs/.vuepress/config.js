@@ -1,31 +1,63 @@
 // .vuepress/config.js
+const dayjs = require('dayjs');
 module.exports = {
+  base:'/blog/',
+  plugins: [
+    [
+      '@vuepress/last-updated',
+      {
+        transformer: (timestamp) => {
+          dayjs.locale('zh-cn')
+          return dayjs(timestamp).format('YYYY-MM-DD HH:mm')
+        }
+      }
+    ]
+  ],
+  title:'七天博客',
+  head: [
+    ['meta', { name: 'keywords', content: 'vue,vue3' }],//配置网站Keywords
+    ['meta', { name: 'author', content: '七天' }],//配置网站作者
+    ['link', { rel: 'icon', href: '/favicon.ico' }],//配置网站Keywords
+  ],
   themeConfig: {
     logo: '/assets/img/avatar.jpg',
+    lastUpdated: '最近更新', // string | boolean
     // navbar: false,
     sidebar: {
       '/pageA/':[
         {
-          title: 'Group 1',   // 必要的
-          // path: '/pageA/',      // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+          title: 'GroupA 1',   // 必要的
           collapsable: false, // 可选的, 默认值是 true,
           sidebarDepth: 1,    // 可选的, 默认值是 1
           children: [
-            {title:'pageA1',path:'pageA1'},
-            {title:'pageA2',path:'pageA2'},
-            {title:'pageA3',path:'pageA3'},
+            '/pageA/',
+            'pageA1',
+            'pageA2',
+            'pageA3'
           ]
         },
         {
           title: 'Group 2',
-          children: [ /* ... */ ],
-          initialOpenGroupIndex: -1 // 可选的, 默认值是 0
+          sidebarDepth: 1,    // 可选的, 默认值是 1
+          collapsable: false, // 可选的, 默认值是 true,
+          children: [
+            'page4',
+            'page5'
+          ],
+          // initialOpenGroupIndex: -1 // 可选的, 默认值是 0
         }
       ],
       '/pageB/':[
-        'pageB1',
-        'pageB2',
-        'pageB3',
+        {
+          title: 'GroupB',   // 必要的
+          collapsable: false, // 可选的, 默认值是 true,
+          sidebarDepth: 1,    // 可选的, 默认值是 1
+          children: [
+            '/pageB/',
+            'pageB1',
+            'pageB2',
+          ]
+        },
       ]
     },
     nav: [
@@ -41,5 +73,6 @@ module.exports = {
       }
       // { text: 'External', link: 'https://google.com' },
     ]
-  }
+  },
+
 }

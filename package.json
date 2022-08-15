@@ -12,5 +12,8 @@
   "license": "MIT",
   "devDependencies": {
     "vuepress": "^1.9.7"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.5"
   }
 }
