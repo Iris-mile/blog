@@ -15,8 +15,8 @@ module.exports = {
         platform: 'github-v4',
   
         // all other options of Vssue are allowed
-        owner: 'iris-mile',
-        repo: 'NAME_OF_REPO',
+        owner: 'Iris-mile',
+        repo: 'blog',
         clientId: '6d3bb59f83ee73fb0d84',
         clientSecret: '5102a13d042caf8969ec380020f191272bec1bc2',
         autoCreateIssue:true
