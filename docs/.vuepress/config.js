@@ -21,6 +21,7 @@ module.exports = {
         clientSecret: '5102a13d042caf8969ec380020f191272bec1bc2',
         autoCreateIssue:true
       },
+      '@vuepress/back-to-top':true
   },
 
   title:'七天博客',
