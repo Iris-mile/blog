@@ -1,5 +1,5 @@
 const dayjs = require('dayjs');
-const secret = require('./secret');
+const secret = require('./confidential');
 
 module.exports ={
   '@vuepress/last-updated':
