@@ -1,4 +1,6 @@
 const dayjs = require('dayjs');
+const secret = require('./secret');
+
 module.exports ={
   '@vuepress/last-updated':
     {
@@ -14,8 +16,8 @@ module.exports ={
       // all other options of Vssue are allowed
       owner: 'Iris-mile',
       repo: 'blog',
-      clientId: '6d3bb59f83ee73fb0d84',
-      clientSecret: '5102a13d042caf8969ec380020f191272bec1bc2',
+      clientId: secret.clientId,
+      clientSecret:secret.clientSecret,
       autoCreateIssue:true
     },
     '@vuepress/back-to-top':true

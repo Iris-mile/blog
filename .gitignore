@@ -105,3 +105,6 @@ dist
 
 # vuepress temp file
 .temp
+
+# 忽略隐私信息
+secret.js

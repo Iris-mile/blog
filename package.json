@@ -8,7 +8,7 @@
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh"
   },
-  "repository": "git@github.com:Iris-mile/mytest.git",
+  "repository": "git+ssh://git@github.com/Iris-mile/mytest.git",
   "author": "Iris-mile <1296820437@qq.com>",
   "license": "MIT",
   "devDependencies": {
@@ -19,5 +19,14 @@
     "@vssue/api-github-v4": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
     "dayjs": "^1.11.5"
-  }
+  },
+  "description": "博客测试练习文档",
+  "bugs": {
+    "url": "https://github.com/Iris-mile/mytest/issues"
+  },
+  "homepage": "https://github.com/Iris-mile/mytest#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
 }
