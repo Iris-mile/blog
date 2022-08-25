@@ -18,6 +18,7 @@
   "dependencies": {
     "@vssue/api-github-v4": "^1.4.7",
     "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "countup.js": "^2.3.2",
     "dayjs": "^1.11.5"
   },
   "description": "博客测试练习文档",

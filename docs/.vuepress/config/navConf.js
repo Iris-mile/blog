@@ -1,9 +1,9 @@
 
-
 module.exports = [
   { text: 'Home', link: '/' },
   { text: 'PageA', link: '/pageA/' },
   { text: 'PageB', link: '/pageB/' },
+  { text: 'Markdown', link: '/Markdown/' },
   {
     text: 'Languages',
     items: [

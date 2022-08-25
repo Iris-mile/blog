@@ -107,4 +107,4 @@ dist
 .temp
 
 # 忽略隐私信息（注意保存好文件，本地删除后git远程将无法拉取到）
-confidential.js
+# confidential.js

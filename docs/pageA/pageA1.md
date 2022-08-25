@@ -1,19 +1,7 @@
 ---
 # sidebar: auto
-title: 使用主题
+title: 第三方组件countup.js使用
 ---
+<CountUp :endVal='2000'/>
 
-
-
-## 标题 2
-
-### 标题 3.1
-
-### 标题 3.2
-
-### 标题 3.3
-
-#### 标题 4.1
-
-#### 标题 4.2
-
+<<< @/docs/.vuepress/components/CountUp.vue
