@@ -1,18 +1,16 @@
 ---
-# home: true
-# heroImage: /hero.png
-heroText: Hero 标题
-tagline: Hero 副标题
-actionText: 快速上手 →
-actionLink: /zh/guide/
+home: true
+heroImage: /assets/img/bg.jpg
+heroText: 
+tagline: 一个人，学会了一样本事，总舍不得放着不用
+actionText: 欢迎光临 →
+actionLink: /vue3_course/
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
-footer: MIT Licensed | Copyright © 2018-present Evan You
+  - title: 学习笔记
+    details: 博客用于记录学习过程中的笔记和知识点，比如vue3,ts,react,three.js等等
+  - title: 项目问题
+    details: 展示所做项目中遇到的各种问题和解决办法，以及各类数据处理
+  - title: 使用工具
+    details: 累计前端使用的各类工具、插件、网站、项目等等
+footer: IRISE BLOG | Copyright © 2022-present Evan You
 ---
-# Hello VuePress
-测试一下travis ci部署??????

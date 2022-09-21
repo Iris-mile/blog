@@ -58,7 +58,15 @@ sidebar: auto
 ![图片alt](图片地址)
 ```
 示例：
-![点赞~1.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57b72fe1cff949e8b3e063120de3c45a~tplv-k3u1fbpfcp-watermark.image)
+![点赞~1.gif](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/57b72fe1cff949e8b3e063120de3c45a~tplv-k3u1fbpfcp-watermark.image) 
+
+图片引入：
+```md
+<img :src="$withBase('/favicon.ico')" alt="foo">
+
+![favicon](./favicon.ico)
+```
+示例：<img :src="$withBase('/favicon.ico')" alt="foo" class='move'>  ![favicon](/favicon.ico)
 
 ### 超链接
 ```md

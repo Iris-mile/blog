@@ -20,5 +20,8 @@ module.exports ={
       clientSecret:secret.clientSecret,
       autoCreateIssue:true
     },
-    '@vuepress/back-to-top':true
+    '@vuepress/back-to-top':true,
+    '@vuepress/medium-zoom': {
+      selector: 'img.move',//move为Img标签的class类名，控制自定义图片点击缩放
+    }
 }
