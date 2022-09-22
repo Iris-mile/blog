@@ -29,8 +29,17 @@ module.exports =  {
       sidebarDepth: 1,    // 可选的, 默认值是 1
       children: [
         '/project/',
-        // 'pageB1',
-        // 'pageB2',
+        'request',
+        'style',
+        'picture',
+        'css',
+        'problems',
+        // 'iframe',
+        'theme',
+        'vue2',
+        'vuex',
+        'class',
+        'component'
       ]
     },
   ],
@@ -52,7 +61,7 @@ module.exports =  {
       sidebarDepth: 1,    // 可选的, 默认值是 1
       children: [
         '/js/',
-        // 'pageB1',
+        'arr',
         // 'pageB2',
       ]
     },
