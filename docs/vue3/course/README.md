@@ -1,5 +1,7 @@
-
-# Vue3 使用文档 Composition API 组合式 api【重点】
+---
+title: Vue3 使用文档 Composition API 组合式 api【重点】
+sidebar: auto
+---
 
 ## vue3 特性
 
@@ -27,8 +29,8 @@
 - 建 【views 文件夹下面简历里面级别组件    如果是后台框架就在src文件夹下 建立layout文件夹】
 - 配 【router/index.js 里面配置页面级别组件和路由地址的一一对应关系】 
 - 测 【输入地址测试 要给出口】 
-  - 路由视图组件<router-view />  
-  - 路由导航组件<router-link />
+  - 路由视图组件
+  - 路由导航组件
 
 ### router/index.js
 
@@ -124,7 +126,7 @@ app.mount('#app')
 在 `setup` 中你应该避免使用 `this`，因为它不会找到组件实例。`setup` 的调用发生在 `data` property、`computed` property 或 `methods` 被解析之前，所以它们无法在 `setup` 中被获取，这也是为了避免setup()和其他选项式API混淆。
 ```
 
-```vue
+```js
 
 <template>
     {{msg}}
@@ -177,7 +179,7 @@ const sayHi = () => {
   + 修改数据 用.value 属性修改[重要!!!]
 * 响应式状态需要明确使用[响应式 APIs](https://v3.cn.vuejs.org/api/basic-reactivity.html) 来创建。和从 `setup()` 函数中返回值一样，ref 值在模板中使用的时候会自动解包
 
-```vue
+```js
 <template>
     {{变量名}}
     <button @click='change'>点击我</button>
@@ -199,7 +201,7 @@ const change = ()=> {
 
 * dom 绑定
 
-```vue
+```js
 <template>
    <标签 ref='变量名'></标签>
 </template>
@@ -226,7 +228,7 @@ const 变量名 = ref(null)
 
 - 语法
 
-```vue
+```js
 <template>
     {{state.属性1}}
 </template>
@@ -242,7 +244,7 @@ const state = reactive({
 </script>
 ```
 
-```vue
+```js
 <template>
     {{state.name}}
     {{state.k1.k2}}
@@ -295,7 +297,7 @@ const { 属性1, 属性2 } = toRefs(state)
 
 - 示例
 
-```vue
+```js
 <template>
     {{name}}
     {{age}}
@@ -391,7 +393,7 @@ const 计算属性变量 = computed({
 
 - 示例
 
-```vue
+```js
 #getter
 <template>
     <h1>计算属性 computed</h1>
@@ -603,7 +605,7 @@ import { onMounted, onActivated, onUnmounted, onUpdated, onDeactivated } from 'v
 
 ### 父传子
 
-```vue
+```js
 #父组件
 <template>
   <子组件 自定义属性1='静态' :自定义属性2='动态值'></子组件>
@@ -634,7 +636,7 @@ import { onMounted, onActivated, onUnmounted, onUpdated, onDeactivated } from 'v
 
 ### 子传父
 
-```vue
+```js
 #子组件
 <script setup>
 
@@ -667,7 +669,7 @@ const 处理函数 = (data) => {
 
 - 语法
 
-```vue
+```js
 #子组件
 <script setup>
 
@@ -749,7 +751,7 @@ export default useTableWidth
 
 - 使用
 
-```vue
+```js
 <template>
 <!-- 表格 -->
 <el-table ref="tableRef"  :style="{ width: w }" ></el-table>

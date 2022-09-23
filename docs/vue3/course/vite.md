@@ -1,4 +1,7 @@
-# Vite 构建项目
+---
+title: Vite 构建项目
+sidebar: auto
+---
 
 Vite（法语意为 "快速的"，发音 `/vit/`发音同 "veet")是一种新型前端构建工具，能够显著提升前端开发体验。它主要由两部分组成：
 
@@ -19,7 +22,6 @@ Vite 以 [原生 ESM](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Gu
 
 ## 安装 & 启动
 
-![image-20220704092128035](imgs/image-20220704092128035.png)
 
 - 注意：Vite 需要 [Node.js](https://nodejs.org/en/) 版本 >= 12.0.0。
 
