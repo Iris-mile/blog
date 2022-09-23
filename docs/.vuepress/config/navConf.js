@@ -6,14 +6,14 @@ module.exports = [{
     text: 'vue3',
     items: [{
       text: '课程笔记',
-      link: '/vue3_course/'
+      link: '/vue3/course/'
     }, {
       text: '总结笔记',
-      link: '/vue3_my/'
+      link: '/vue3/my/'
     },
     {
       text: '项目问题',
-      link: '/vue3_project/'
+      link: '/vue3/project/'
     }]
   },
   {

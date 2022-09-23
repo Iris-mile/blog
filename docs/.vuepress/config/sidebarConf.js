@@ -43,13 +43,13 @@ module.exports =  {
       ]
     },
   ],
-  '/vue3_course/':[
+  '/vue3/course/':[
     {
       title: 'vue3课程知识',   // 必要的
       collapsable: false, // 可选的, 默认值是 true,
       sidebarDepth: 1,    // 可选的, 默认值是 1
       children: [
-        '/vue3_course/',
+        '/vue3/course/',
         'vite'
       ]
     },
