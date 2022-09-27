@@ -4,7 +4,7 @@ heroImage: /assets/img/bg.jpg
 heroText: 
 tagline: 一个人，学会了一样本事，总舍不得放着不用
 actionText: 欢迎光临 →
-actionLink: /vue3_course/
+actionLink: /vue3/course/
 features:
   - title: 学习笔记
     details: 博客用于记录学习过程中的笔记和知识点，比如vue3,ts,react,three.js等等
