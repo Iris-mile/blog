@@ -62,7 +62,7 @@ module.exports =  {
       children: [
         '/js/',
         'arr',
-        // 'pageB2',
+        'function',
       ]
     },
   ]
