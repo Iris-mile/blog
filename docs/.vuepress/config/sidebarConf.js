@@ -54,6 +54,16 @@ module.exports =  {
       ]
     },
   ],
+  '/vue3/project/':[
+    {
+      title: 'vue3课程知识',   // 必要的
+      collapsable: false, // 可选的, 默认值是 true,
+      sidebarDepth: 1,    // 可选的, 默认值是 1
+      children: [
+        '/vue3/project/',
+      ]
+    },
+  ],
   '/js/':[
     {
       title: 'js数据处理',   // 必要的
