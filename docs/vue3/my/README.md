@@ -1,6 +1,6 @@
 ---
 title: Vue3 学习笔记
-sidebar: auto
+# sidebar: auto
 ---
 ## 提要
  + 插件：volar(vscode海贼王插件 官方推荐)

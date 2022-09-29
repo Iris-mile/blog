@@ -1,6 +1,6 @@
 ---
-title: Vue3 使用文档 Composition API 组合式 api【重点】
-sidebar: auto
+title: Vue3 使用文档
+# sidebar: auto
 ---
 
 ## vue3 特性

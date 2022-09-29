@@ -1,6 +1,6 @@
 ---
 title: Vite 构建项目
-sidebar: auto
+# sidebar: auto
 ---
 
 Vite（法语意为 "快速的"，发音 `/vit/`发音同 "veet")是一种新型前端构建工具，能够显著提升前端开发体验。它主要由两部分组成：
