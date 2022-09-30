@@ -109,7 +109,7 @@ import { mapGetters,mapMutations, mapActions} from "vuex";
     1、mutations:this.$store.commit('websocket/SET_NowDate', nowObj)
     2、actions:this.$store.dispatch('user/login', this.loginForm)
     3、satte:this.$store.state('user/ip')
-    4、getters:this.$store.state('user/ip')
+    4、getters:this.$store.getters('user/ip')
 ```
 :::warming
 状态机异步数据没有拿取到时页面渲染：
@@ -120,7 +120,10 @@ import { mapGetters,mapMutations, mapActions} from "vuex";
 ## js文件使用vuex
 ```js
 import store from './store'
-            store.getters.userInfo
+            store.getters.userInfo//集中到getters.js的 
+            //没有集中到getters.js的获取
+            store.getters.user.userInfo
+            store.getters['user/userInfo']
             await store.dispatch('user/getInfo')
             store.state.user.userMenus
 ```

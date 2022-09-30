@@ -71,4 +71,47 @@ let $route =useRoute()
     ├─ getters.js
     └─ index.js
  ```
-   
++ index.js文件
+```js
+import {createStore} from 'vuex'//注意区分与vue2的方法
+
+import menuState from './modules/menuState.js'
+import getters from './getters'
+
+let store=createStore({//实例化
+  modules:{
+    menuState,
+  },
+  getters
+})
+export default store
+```
+ + getter.js集中获取仓库state数据
+```js
+const getters={
+  isShow:(state)=>state.menuState.isShow
+}
+export default getters
+```
+
++ 在main.js中引入仓库
+```js
+import store from "/@store/index.js"
+app.use(store)
+```
+
++ vue组件中引用
+```js
+import {useStore} from 'vuex'
+let $store=useStore()
+console.log($store);
+
+//集中getters.js目的和区别
+ $store.getter.isShow//集中
+ $store.state.menuState.isShow//不集中
+
+ const isShow = computed(() =>$store.getters.isShow)
+```
++ vuex结构
+通过打印获取vuex的$store目录结构
+![$store目录结构](/assets/img/vuex.jpg)
