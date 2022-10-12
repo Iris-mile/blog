@@ -111,7 +111,7 @@ import { mapGetters,mapMutations, mapActions} from "vuex";
     3、satte:this.$store.state('user/ip')
     4、getters:this.$store.getters('user/ip')
 ```
-:::warming
+::: warming
 状态机异步数据没有拿取到时页面渲染：
 + v-if="weightRate.up"解决状态机的接口数据异步没拿取到
 + if (!state.trainArriveInfo) return {};配合状态机没有数据时处理
