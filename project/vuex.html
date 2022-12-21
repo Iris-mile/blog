@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vuex | 七天博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="vue,vue3">
+    <meta name="author" content="七天">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.14da610f.css" as="style"><link rel="preload" href="/blog/assets/js/app.58c6e035.js" as="script"><link rel="preload" href="/blog/assets/js/7.ed085243.js" as="script"><link rel="preload" href="/blog/assets/js/2.24c2bd5b.js" as="script"><link rel="preload" href="/blog/assets/js/26.93092dc0.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.6bdf5d3d.js"><link rel="prefetch" href="/blog/assets/js/11.c18a9f69.js"><link rel="prefetch" href="/blog/assets/js/12.caac2d95.js"><link rel="prefetch" href="/blog/assets/js/13.aca5ec30.js"><link rel="prefetch" href="/blog/assets/js/14.6d306085.js"><link rel="prefetch" href="/blog/assets/js/15.f048736f.js"><link rel="prefetch" href="/blog/assets/js/16.c13cba98.js"><link rel="prefetch" href="/blog/assets/js/17.39cfb2c4.js"><link rel="prefetch" href="/blog/assets/js/18.9425d684.js"><link rel="prefetch" href="/blog/assets/js/19.f64b3ce3.js"><link rel="prefetch" href="/blog/assets/js/20.de40099c.js"><link rel="prefetch" href="/blog/assets/js/21.0fff9366.js"><link rel="prefetch" href="/blog/assets/js/22.604fe1ee.js"><link rel="prefetch" href="/blog/assets/js/23.356efa1a.js"><link rel="prefetch" href="/blog/assets/js/24.919f205b.js"><link rel="prefetch" href="/blog/assets/js/25.39802ff1.js"><link rel="prefetch" href="/blog/assets/js/27.aaf0e2b2.js"><link rel="prefetch" href="/blog/assets/js/28.75361c95.js"><link rel="prefetch" href="/blog/assets/js/29.112e081f.js"><link rel="prefetch" href="/blog/assets/js/3.c2a0ba11.js"><link rel="prefetch" href="/blog/assets/js/30.5af5a643.js"><link rel="prefetch" href="/blog/assets/js/31.c7783000.js"><link rel="prefetch" href="/blog/assets/js/32.18239714.js"><link rel="prefetch" href="/blog/assets/js/33.045a15be.js"><link rel="prefetch" href="/blog/assets/js/34.ff8403d2.js"><link rel="prefetch" href="/blog/assets/js/35.1946489a.js"><link rel="prefetch" href="/blog/assets/js/4.b05b8f69.js"><link rel="prefetch" href="/blog/assets/js/5.b42ed5be.js"><link rel="prefetch" href="/blog/assets/js/6.fc1ac2fc.js"><link rel="prefetch" href="/blog/assets/js/8.bf280482.js"><link rel="prefetch" href="/blog/assets/js/9.c3fcb4a0.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.14da610f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/img/avatar.jpg" alt="七天博客" class="logo"> <span class="site-name can-hide">七天博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/vue3/course/" class="nav-link">
+  vue3
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="project problem" class="dropdown-title"><span class="title">project problem</span> <span class="arrow down"></span></button> <button type="button" aria-label="project problem" class="mobile-dropdown-title"><span class="title">project problem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link">
+  js数据处理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/project/" class="nav-link router-link-active">
+  项目积累
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具语法" class="dropdown-title"><span class="title">工具语法</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具语法" class="mobile-dropdown-title"><span class="title">工具语法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typora/" class="nav-link">
+  typora
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="相关网页" class="dropdown-title"><span class="title">相关网页</span> <span class="arrow down"></span></button> <button type="button" aria-label="相关网页" class="mobile-dropdown-title"><span class="title">相关网页</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Github
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Iris-mile/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://iris-mile.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuepress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/vue3/course/" class="nav-link">
+  vue3
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="project problem" class="dropdown-title"><span class="title">project problem</span> <span class="arrow down"></span></button> <button type="button" aria-label="project problem" class="mobile-dropdown-title"><span class="title">project problem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link">
+  js数据处理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/project/" class="nav-link router-link-active">
+  项目积累
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具语法" class="dropdown-title"><span class="title">工具语法</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具语法" class="mobile-dropdown-title"><span class="title">工具语法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typora/" class="nav-link">
+  typora
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="相关网页" class="dropdown-title"><span class="title">相关网页</span> <span class="arrow down"></span></button> <button type="button" aria-label="相关网页" class="mobile-dropdown-title"><span class="title">相关网页</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Github
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Iris-mile/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://iris-mile.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuepress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>项目可用积累</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/project/" aria-current="page" class="sidebar-link">业务需求1</a></li><li><a href="/blog/project/request.html" class="sidebar-link">数据请求</a></li><li><a href="/blog/project/style.html" class="sidebar-link">css中的style</a></li><li><a href="/blog/project/picture.html" class="sidebar-link">图片处理</a></li><li><a href="/blog/project/css.html" class="sidebar-link">css</a></li><li><a href="/blog/project/problems.html" class="sidebar-link">问题累计</a></li><li><a href="/blog/project/theme.html" class="sidebar-link">主题切换theme</a></li><li><a href="/blog/project/vue2.html" class="sidebar-link">vue2</a></li><li><a href="/blog/project/vuex.html" aria-current="page" class="active sidebar-link">vuex</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/project/vuex.html#模块化" class="sidebar-link">模块化</a></li><li class="sidebar-sub-header"><a href="/blog/project/vuex.html#getters提取" class="sidebar-link">getters提取</a></li><li class="sidebar-sub-header"><a href="/blog/project/vuex.html#index-js集中模块" class="sidebar-link">index.js集中模块</a></li><li class="sidebar-sub-header"><a href="/blog/project/vuex.html#界面使用" class="sidebar-link">界面使用</a></li><li class="sidebar-sub-header"><a href="/blog/project/vuex.html#js文件使用vuex" class="sidebar-link">js文件使用vuex</a></li></ul></li><li><a href="/blog/project/class.html" class="sidebar-link">css中的class</a></li><li><a href="/blog/project/component.html" class="sidebar-link">组件封装</a></li><li><a href="/blog/project/websocket.html" class="sidebar-link">websocket</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="模块化"><a href="#模块化" class="header-anchor">#</a> 模块化</h2> <ol><li>state</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> state <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">trainArriveInfo</span><span class="token operator">:</span> <span class="token keyword">null</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>getters,参数(state, getters)</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token comment">// 车厢拥挤度</span>
+          <span class="token function">weightRate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+           # <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>state<span class="token punctuation">.</span>trainArriveInfo<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> <span class="token punctuation">{</span> upList<span class="token punctuation">,</span> downList <span class="token punctuation">}</span> <span class="token operator">=</span> state<span class="token punctuation">.</span>trainArriveInfo<span class="token punctuation">;</span>
+            <span class="token keyword">const</span> up <span class="token operator">=</span> upList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>vehicleWeightVOList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">v</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span>fullVehicleWeight <span class="token operator">-</span> v<span class="token punctuation">.</span>nowVehicleWeight<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span>fullVehicleWeight <span class="token operator">-</span> v<span class="token punctuation">.</span>emptyVehicleWeight<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token keyword">const</span> down <span class="token operator">=</span> downList<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>vehicleWeightVOList<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token parameter">v</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span>fullVehicleWeight <span class="token operator">-</span> v<span class="token punctuation">.</span>nowVehicleWeight<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>v<span class="token punctuation">.</span>fullVehicleWeight <span class="token operator">-</span> v<span class="token punctuation">.</span>emptyVehicleWeight<span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token comment">//处理下行数据默认向右</span>
+            <span class="token keyword">return</span> <span class="token punctuation">{</span> up<span class="token punctuation">,</span> <span class="token literal-property property">down</span><span class="token operator">:</span> down<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+        
+    
+          <span class="token function-variable function">isCenter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> getters</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> getters<span class="token punctuation">.</span>centerIp<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>hostname<span class="token punctuation">)</span><span class="token punctuation">,</span>
+
+  <span class="token function-variable function">currentStationName</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>stationIPList<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> state<span class="token punctuation">.</span>centerDisplayStation <span class="token operator">?</span> 
+    item<span class="token punctuation">.</span>ip <span class="token operator">===</span> state<span class="token punctuation">.</span>centerDisplayStation 
+    <span class="token operator">:</span> item<span class="token punctuation">.</span>ip<span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span>hostname<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">?.</span>name<span class="token punctuation">,</span>
+
+          <span class="token function-variable function">stationIPListByFilter</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>stationIPList<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> <span class="token operator">!</span>item<span class="token punctuation">.</span>isCenter<span class="token punctuation">)</span>
+    
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="3"><li>mutations,参数(state, payload)</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> mutations <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">SET_ARRIVE</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> data</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    state<span class="token punctuation">.</span>trainArriveInfo <span class="token operator">=</span> data
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><ol start="4"><li>actions,参数({ commit }，payload)</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> actions <span class="token operator">=</span> <span class="token punctuation">{</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">模块化暴露</p> <p>export default {
+namespaced: true,
+state,
+getters,
+mutations,
+actions
+}</p></div> <h2 id="getters提取"><a href="#getters提取" class="header-anchor">#</a> getters提取</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> getters <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">trainArriveInfo</span><span class="token operator">:</span> <span class="token parameter">state</span> <span class="token operator">=&gt;</span> state<span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>trainArriveInfo<span class="token punctuation">,</span>
+  <span class="token function-variable function">weightRate</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">state<span class="token punctuation">,</span> getters</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> getters<span class="token punctuation">[</span><span class="token string">'websocket/weightRate'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> getters
+</code></pre></div><h2 id="index-js集中模块"><a href="#index-js集中模块" class="header-anchor">#</a> index.js集中模块</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> Vuex <span class="token keyword">from</span> <span class="token string">'vuex'</span>
+<span class="token keyword">import</span> getters <span class="token keyword">from</span> <span class="token string">'./getters'</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>Vuex<span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> store <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vuex<span class="token punctuation">.</span>Store</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  modules<span class="token punctuation">,</span>
+  getters
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> store
+</code></pre></div><h2 id="界面使用"><a href="#界面使用" class="header-anchor">#</a> 界面使用</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> mapGetters<span class="token punctuation">,</span>mapMutations<span class="token punctuation">,</span> mapActions<span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;vuex&quot;</span><span class="token punctuation">;</span>
+<span class="token comment">// 1.getters、states数据通过computed获取</span>
+ <span class="token literal-property property">computed</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token comment">//getters集中快下</span>
+    <span class="token operator">...</span><span class="token function">mapGetters</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&quot;trainArriveInfo&quot;</span><span class="token punctuation">,</span> <span class="token string">'weightRate'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token comment">//center模块下</span>
+    <span class="token operator">...</span><span class="token function">mapState</span><span class="token punctuation">(</span><span class="token string">&quot;center&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'centerDisplayStation'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+
+<span class="token comment">// 2.actions mutations在methods下获取</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token operator">...</span><span class="token function">mapMutations</span><span class="token punctuation">(</span><span class="token string">'cctv'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'SET_CCTV_AREA_LIST'</span><span class="token punctuation">,</span> <span class="token string">'SET_CCTV_LIST'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token operator">...</span><span class="token function">mapActions</span><span class="token punctuation">(</span><span class="token string">'cctv'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'getCCTVParams'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">//原始获取方法：</span>
+    <span class="token number">1</span><span class="token literal-property property">、mutations</span><span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">commit</span><span class="token punctuation">(</span><span class="token string">'websocket/SET_NowDate'</span><span class="token punctuation">,</span> nowObj<span class="token punctuation">)</span>
+    <span class="token number">2</span><span class="token literal-property property">、actions</span><span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'user/login'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>loginForm<span class="token punctuation">)</span>
+    <span class="token number">3</span><span class="token literal-property property">、satte</span><span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">state</span><span class="token punctuation">(</span><span class="token string">'user/ip'</span><span class="token punctuation">)</span>
+    <span class="token number">4</span><span class="token literal-property property">、getters</span><span class="token operator">:</span><span class="token keyword">this</span><span class="token punctuation">.</span>$store<span class="token punctuation">.</span><span class="token function">getters</span><span class="token punctuation">(</span><span class="token string">'user/ip'</span><span class="token punctuation">)</span>
+</code></pre></div><p>::: warming
+状态机异步数据没有拿取到时页面渲染：</p> <ul><li>v-if=&quot;weightRate.up&quot;解决状态机的接口数据异步没拿取到</li> <li>if (!state.trainArriveInfo) return {};配合状态机没有数据时处理
+:::</li></ul> <h2 id="js文件使用vuex"><a href="#js文件使用vuex" class="header-anchor">#</a> js文件使用vuex</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store'</span>
+            store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>userInfo<span class="token comment">//集中到getters.js的 </span>
+            <span class="token comment">//没有集中到getters.js的获取</span>
+            store<span class="token punctuation">.</span>getters<span class="token punctuation">.</span>user<span class="token punctuation">.</span>userInfo
+            store<span class="token punctuation">.</span>getters<span class="token punctuation">[</span><span class="token string">'user/userInfo'</span><span class="token punctuation">]</span>
+            <span class="token keyword">await</span> store<span class="token punctuation">.</span><span class="token function">dispatch</span><span class="token punctuation">(</span><span class="token string">'user/getInfo'</span><span class="token punctuation">)</span>
+            store<span class="token punctuation">.</span>state<span class="token punctuation">.</span>user<span class="token punctuation">.</span>userMenus
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">2022-10-12 11:40</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/project/vue2.html" class="prev">
+        vue2
+      </a></span> <span class="next"><a href="/blog/project/class.html">
+        css中的class
+      </a>
+      →
+    </span></p></div>  <!----></main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.58c6e035.js" defer></script><script src="/blog/assets/js/7.ed085243.js" defer></script><script src="/blog/assets/js/2.24c2bd5b.js" defer></script><script src="/blog/assets/js/26.93092dc0.js" defer></script>
+  </body>
+</html>

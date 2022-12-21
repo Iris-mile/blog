@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>websocket | 七天博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/favicon.ico">
+    <meta name="description" content="">
+    <meta name="keywords" content="vue,vue3">
+    <meta name="author" content="七天">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.14da610f.css" as="style"><link rel="preload" href="/blog/assets/js/app.58c6e035.js" as="script"><link rel="preload" href="/blog/assets/js/7.ed085243.js" as="script"><link rel="preload" href="/blog/assets/js/2.24c2bd5b.js" as="script"><link rel="preload" href="/blog/assets/js/27.aaf0e2b2.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.6bdf5d3d.js"><link rel="prefetch" href="/blog/assets/js/11.c18a9f69.js"><link rel="prefetch" href="/blog/assets/js/12.caac2d95.js"><link rel="prefetch" href="/blog/assets/js/13.aca5ec30.js"><link rel="prefetch" href="/blog/assets/js/14.6d306085.js"><link rel="prefetch" href="/blog/assets/js/15.f048736f.js"><link rel="prefetch" href="/blog/assets/js/16.c13cba98.js"><link rel="prefetch" href="/blog/assets/js/17.39cfb2c4.js"><link rel="prefetch" href="/blog/assets/js/18.9425d684.js"><link rel="prefetch" href="/blog/assets/js/19.f64b3ce3.js"><link rel="prefetch" href="/blog/assets/js/20.de40099c.js"><link rel="prefetch" href="/blog/assets/js/21.0fff9366.js"><link rel="prefetch" href="/blog/assets/js/22.604fe1ee.js"><link rel="prefetch" href="/blog/assets/js/23.356efa1a.js"><link rel="prefetch" href="/blog/assets/js/24.919f205b.js"><link rel="prefetch" href="/blog/assets/js/25.39802ff1.js"><link rel="prefetch" href="/blog/assets/js/26.93092dc0.js"><link rel="prefetch" href="/blog/assets/js/28.75361c95.js"><link rel="prefetch" href="/blog/assets/js/29.112e081f.js"><link rel="prefetch" href="/blog/assets/js/3.c2a0ba11.js"><link rel="prefetch" href="/blog/assets/js/30.5af5a643.js"><link rel="prefetch" href="/blog/assets/js/31.c7783000.js"><link rel="prefetch" href="/blog/assets/js/32.18239714.js"><link rel="prefetch" href="/blog/assets/js/33.045a15be.js"><link rel="prefetch" href="/blog/assets/js/34.ff8403d2.js"><link rel="prefetch" href="/blog/assets/js/35.1946489a.js"><link rel="prefetch" href="/blog/assets/js/4.b05b8f69.js"><link rel="prefetch" href="/blog/assets/js/5.b42ed5be.js"><link rel="prefetch" href="/blog/assets/js/6.fc1ac2fc.js"><link rel="prefetch" href="/blog/assets/js/8.bf280482.js"><link rel="prefetch" href="/blog/assets/js/9.c3fcb4a0.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.14da610f.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/assets/img/avatar.jpg" alt="七天博客" class="logo"> <span class="site-name can-hide">七天博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/vue3/course/" class="nav-link">
+  vue3
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="project problem" class="dropdown-title"><span class="title">project problem</span> <span class="arrow down"></span></button> <button type="button" aria-label="project problem" class="mobile-dropdown-title"><span class="title">project problem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link">
+  js数据处理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/project/" class="nav-link router-link-active">
+  项目积累
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具语法" class="dropdown-title"><span class="title">工具语法</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具语法" class="mobile-dropdown-title"><span class="title">工具语法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typora/" class="nav-link">
+  typora
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="相关网页" class="dropdown-title"><span class="title">相关网页</span> <span class="arrow down"></span></button> <button type="button" aria-label="相关网页" class="mobile-dropdown-title"><span class="title">相关网页</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Github
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Iris-mile/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://iris-mile.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuepress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/blog/vue3/course/" class="nav-link">
+  vue3
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="project problem" class="dropdown-title"><span class="title">project problem</span> <span class="arrow down"></span></button> <button type="button" aria-label="project problem" class="mobile-dropdown-title"><span class="title">project problem</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/js/" class="nav-link">
+  js数据处理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/project/" class="nav-link router-link-active">
+  项目积累
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具语法" class="dropdown-title"><span class="title">工具语法</span> <span class="arrow down"></span></button> <button type="button" aria-label="工具语法" class="mobile-dropdown-title"><span class="title">工具语法</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/Markdown/" class="nav-link">
+  Markdown
+</a></li><li class="dropdown-item"><!----> <a href="/blog/typora/" class="nav-link">
+  typora
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="相关网页" class="dropdown-title"><span class="title">相关网页</span> <span class="arrow down"></span></button> <button type="button" aria-label="相关网页" class="mobile-dropdown-title"><span class="title">相关网页</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          Github
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://github.com/Iris-mile/blog" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  仓库地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-subitem"><a href="https://iris-mile.github.io/blog/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  博客地址
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li><li class="dropdown-item"><h4>
+          博客搭建
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="https://www.vuepress.cn/config/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  vuepress
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>项目可用积累</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/project/" aria-current="page" class="sidebar-link">业务需求1</a></li><li><a href="/blog/project/request.html" class="sidebar-link">数据请求</a></li><li><a href="/blog/project/style.html" class="sidebar-link">css中的style</a></li><li><a href="/blog/project/picture.html" class="sidebar-link">图片处理</a></li><li><a href="/blog/project/css.html" class="sidebar-link">css</a></li><li><a href="/blog/project/problems.html" class="sidebar-link">问题累计</a></li><li><a href="/blog/project/theme.html" class="sidebar-link">主题切换theme</a></li><li><a href="/blog/project/vue2.html" class="sidebar-link">vue2</a></li><li><a href="/blog/project/vuex.html" class="sidebar-link">vuex</a></li><li><a href="/blog/project/class.html" class="sidebar-link">css中的class</a></li><li><a href="/blog/project/component.html" class="sidebar-link">组件封装</a></li><li><a href="/blog/project/websocket.html" aria-current="page" class="active sidebar-link">websocket</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/project/websocket.html#websocket简介" class="sidebar-link">websocket简介</a></li><li class="sidebar-sub-header"><a href="/blog/project/websocket.html#websocket在mixins中使用" class="sidebar-link">websocket在mixins中使用</a></li><li class="sidebar-sub-header"><a href="/blog/project/websocket.html#websocket在es6类中实现使用" class="sidebar-link">websocket在ES6类中实现使用</a></li><li class="sidebar-sub-header"><a href="/blog/project/websocket.html#js形式封装websocket" class="sidebar-link">js形式封装websocket</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="websocket简介"><a href="#websocket简介" class="header-anchor">#</a> websocket简介</h2> <h3 id="介绍"><a href="#介绍" class="header-anchor">#</a> 介绍</h3> <ul><li>在网络中的两个应用程序（进程）需要<strong>全双工相互通信</strong>（全双工即双方可同时向对方发送消息），需要用到的就是socket，它能够提供端对端通信。</li> <li>websocket是html5规范中的一个部分，通常它表示为：ws://echo.websocket.org/?encoding=text HTTP/1.1</li> <li>返回的<strong>状态码为101</strong>表示建立连接，握手成功并且基于http协议。websocket提供两种数据传输：文本数据和二进制数据。</li> <li>不同与之前web开发的请求处理响应模式，它提供了一种真正意义上的客户端请求，服务器推送数据的模式，特别适合<strong>实时数据交互应用开发</strong></li></ul> <h3 id="简单使用"><a href="#简单使用" class="header-anchor">#</a> 简单使用</h3> <ul><li><p>初始化建立连接
+let ws=<strong>new WebSocket('ws地址')</strong></p></li> <li><p>WebSocket事件</p> <ol><li><p><strong>连接成功建立的回调方法</strong></p> <p>ws.onopen = function () {
+alert(&quot;WebSocket连接成功&quot;);
+}</p></li> <li><p><strong>接收到消息的回调方法，websocket的controller里的onMessage方法session_to传过来的值</strong></p> <p>ws.onmessage = function (event) {
+alert(event.data);
+}</p></li> <li><p><strong>连接关闭的回调方法</strong></p> <p>ws.onclose = function () {
+alert(&quot;WebSocket连接关闭&quot;);
+}</p></li> <li><p><strong>连接发生错误的回调方法</strong></p> <p>ws.onerror = function () {
+alert(&quot;WebSocket连接发生错误&quot;);
+};</p></li></ol></li> <li><p>websocket方法</p></li></ul> <ol><li>发送消息：ws.send()</li> <li>关闭连接： ws.close()</li></ol> <h2 id="websocket在mixins中使用"><a href="#websocket在mixins中使用" class="header-anchor">#</a> websocket在mixins中使用</h2> <h3 id="使用场景"><a href="#使用场景" class="header-anchor">#</a> 使用场景：</h3> <p>项目中有多个websocket地址，需要new不同个ws连接。因此可以简单利用mixins，在需要的地方组件引入使用</p> <h3 id="mixins文件"><a href="#mixins文件" class="header-anchor">#</a> mixins文件</h3> <p>将websocket的初始化，销毁以及接收相关重复内容写入mixins</p> <div class="language-js extra-class"><pre class="language-js"><code>    <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+      <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">websocket</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">destroyed</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>websocket <span class="token operator">&amp;&amp;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>websocket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>websocket <span class="token operator">=</span> <span class="token keyword">null</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> WebSocket <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'您的浏览器不支持WebSocket'</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span>
+          <span class="token punctuation">}</span>
+
+          <span class="token keyword">const</span> <span class="token punctuation">{</span> protocol <span class="token punctuation">}</span> <span class="token operator">=</span> window<span class="token punctuation">.</span>location
+          <span class="token keyword">const</span> prefix <span class="token operator">=</span> protocol <span class="token operator">===</span> <span class="token string">'https:'</span> <span class="token operator">?</span> <span class="token string">'wss:'</span> <span class="token operator">:</span> <span class="token string">'ws:'</span>
+          <span class="token keyword">const</span> <span class="token punctuation">{</span> hostname <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">URL</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span><span class="token constant">VUE_APP_BASE_API</span> <span class="token operator">||</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">VUE_APP_BASE_API</span><span class="token punctuation">)</span>
+          <span class="token keyword">const</span> suffixName <span class="token operator">=</span> <span class="token string">'xx'</span>
+          <span class="token keyword">const</span> <span class="token punctuation">{</span> port<span class="token punctuation">,</span> name <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>wsInitialParams
+          <span class="token keyword">const</span> wsUri <span class="token operator">=</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>prefix<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">//</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>hostname<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>port<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">/</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>suffixName<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span>
+
+          <span class="token keyword">this</span><span class="token punctuation">.</span>websocket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span>wsUri<span class="token punctuation">)</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>onopen <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>websocketOnopen
+          <span class="token keyword">this</span><span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>onmessage <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>websocketOnmessage
+          <span class="token keyword">this</span><span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>onerror <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>websocketOnerror
+          <span class="token keyword">this</span><span class="token punctuation">.</span>websocket<span class="token punctuation">.</span>onclose <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>websocketOnclose
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 连接成功</span>
+        <span class="token function">websocketOnopen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// console.log('WebSocket连接成功')</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 连接建立失败重连</span>
+        <span class="token function">websocketOnerror</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// console.log(`连接失败的信息：`, e)</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>count <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 连接失败后尝试重新连接</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>count<span class="token operator">++</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// 关闭连接</span>
+        <span class="token function">websocketOnclose</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">// console.log('断开连接',e)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h3 id="组件内部"><a href="#组件内部" class="header-anchor">#</a> 组件内部</h3> <p>将websocket相关的mixins引入，并且在data里面准备好mixins需要的socket地址相关内容。组件里面可以单独处理接收这个websocket消息内容，接收方法对应mixins里面websocketOnmessage方法</p> <div class="language-js extra-class"><pre class="language-js"><code>  <span class="token literal-property property">mixins</span><span class="token operator">:</span> <span class="token punctuation">[</span>socket<span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token keyword">return</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">wsInitialParams</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">port</span><span class="token operator">:</span> <span class="token number">9098</span><span class="token punctuation">,</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'xx'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 接收后端返回的数据</span>
+   <span class="token function">websocketOnmessage</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">const</span> res <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+     <span class="token comment">//处理页面需要数据逻辑</span>
+   <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><h3 id="注意点"><a href="#注意点" class="header-anchor">#</a> 注意点</h3> <p>需要注意的是，有可能一个组件里面需要两个不同的socket，这个时候就不能只用一个mixins，这时候会造成不对应接收混乱最后只有一个socket。这会就需要new两个mixins文件。</p> <h2 id="websocket在es6类中实现使用"><a href="#websocket在es6类中实现使用" class="header-anchor">#</a> websocket在ES6类中实现使用</h2> <h3 id="场景"><a href="#场景" class="header-anchor">#</a> 场景</h3> <p>这种多用于只有一个socket，前后端定义好需要接收和发送的数据类型（如果没有约定，可以自行删除相关无用代码直接接收消息处理数据），并且做了相关断链优化处理。下面做了些小改动，应该同样适用于多个socket,new不同个socket实例化对象。</p> <h3 id="js文件"><a href="#js文件" class="header-anchor">#</a> js文件</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">class</span> <span class="token class-name">SocketService</span> <span class="token punctuation">{</span>
+ <span class="token comment">// static instance = null</span>
+ <span class="token comment">// // 初始化创建对象，通过SocketService.Instance</span>
+ <span class="token comment">// static get Instance() {</span>
+ <span class="token comment">//   if (this.instance === null) {</span>
+ <span class="token comment">//     this.instance = new SocketService()</span>
+ <span class="token comment">//   }</span>
+ <span class="token comment">//   return this.instance</span>
+ <span class="token comment">// }</span>
+<span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">url</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+ <span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token operator">=</span>url
+<span class="token punctuation">}</span>
+
+ ws
+ callBackFunction <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">//注册函数对象</span>
+ isConnect <span class="token operator">=</span> <span class="token boolean">false</span> <span class="token comment">//是否链接</span>
+ reconnectCount <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">//重连次数</span>
+ sendCount <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">//重连次数</span>
+
+ <span class="token comment">//创建链接方法</span>
+ <span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>window<span class="token punctuation">.</span>WebSocket<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'你的浏览器不支持WebSocket'</span><span class="token punctuation">)</span>
+     <span class="token keyword">return</span>
+   <span class="token punctuation">}</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>ws <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">)</span>
+
+   <span class="token comment">//链接成功回调</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>ws<span class="token punctuation">.</span><span class="token function-variable function">onopen</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>isConnect <span class="token operator">=</span> <span class="token boolean">true</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>reconnectCount <span class="token operator">=</span> <span class="token number">0</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">//链接关闭回调:连接服务端失败,or连接成功之后服务器关闭的情况</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>ws<span class="token punctuation">.</span><span class="token function-variable function">onclose</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+     <span class="token keyword">this</span><span class="token punctuation">.</span>isConnect <span class="token operator">=</span> <span class="token boolean">false</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>reconnectCount <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">return</span>
+     <span class="token punctuation">}</span>
+
+     <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span>reconnectCount<span class="token operator">++</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>reconnectCount <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token comment">//优化：间隔一定时间链接，不要一失败就重连</span>
+   <span class="token punctuation">}</span>
+
+   <span class="token comment">//接收消息回调</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>ws<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">evt</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token keyword">let</span> revData <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>evt<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+     <span class="token keyword">let</span> socketType <span class="token operator">=</span> revData<span class="token punctuation">.</span>socketType
+
+     <span class="token comment">//接收到消息调用相关组件内处理函数</span>
+     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>callBackFunction<span class="token punctuation">[</span>socketType<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span>callBackFunction<span class="token punctuation">[</span>socketType<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> revData<span class="token punctuation">)</span>
+     <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span>
+   <span class="token comment">//链接失败的回调</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>ws<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ <span class="token comment">//注册函数</span>
+ <span class="token function">resignCallbackFunction</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">,</span> func</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>callBackFunction<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> func
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">//注销函数</span>
+ <span class="token function">unRegisterCallBack</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">this</span><span class="token punctuation">.</span>callBackFunction<span class="token punctuation">[</span>name<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">null</span>
+ <span class="token punctuation">}</span>
+
+ <span class="token comment">//发送消息</span>
+ <span class="token function">send</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>isConnect<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>sendCount<span class="token operator">=</span><span class="token number">0</span><span class="token comment">//发送成功</span>
+     <span class="token keyword">this</span><span class="token punctuation">.</span>ws<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment">//链接失败的情况再次定时重发</span>
+     <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span>sendCount<span class="token operator">++</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>sendCount <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> ws1<span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">SocketService</span><span class="token punctuation">(</span>ws1地址<span class="token punctuation">)</span>
+<span class="token comment">// let ws2=new SocketService(ws2地址)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> ws1
+</code></pre></div><h3 id="使用在全局引入main-js"><a href="#使用在全局引入main-js" class="header-anchor">#</a> 使用在全局引入main.js</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> ws1 <span class="token keyword">from</span> <span class="token string">'@/utils/socket'</span>
+<span class="token comment">// 对服务端进行websocket的连接</span>
+ws1<span class="token punctuation">.</span>Instance<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// console.log(SocketService.Instance.connect);</span>
+
+<span class="token comment">// 其他的组件  this.$socket</span>
+<span class="token class-name">Vue</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$socket <span class="token operator">=</span> ws1<span class="token punctuation">.</span>Instance
+</code></pre></div><h3 id="组件内接收约定的相关数据"><a href="#组件内接收约定的相关数据" class="header-anchor">#</a> 组件内接收约定的相关数据</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">getData</span><span class="token punctuation">(</span><span class="token parameter">ret</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>allData<span class="token operator">=</span>ret
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">mounted</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">//进入组件注册当接收到消息需要调用的处理函数方法到实例化对象上</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$socket<span class="token punctuation">.</span><span class="token function">resignCallbackFunction</span><span class="token punctuation">(</span><span class="token string">'mapData'</span><span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>getData<span class="token punctuation">)</span>
+
+      <span class="token comment">//给socket发送你需要的数据内容</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$socket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">action</span><span class="token operator">:</span> <span class="token string">'getData'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">socketType</span><span class="token operator">:</span> <span class="token string">'mapData'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">chartName</span><span class="token operator">:</span> <span class="token string">'map'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">value</span><span class="token operator">:</span> <span class="token string">''</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+    <span class="token function">beforeDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>$socket<span class="token punctuation">.</span><span class="token function">unRegisterCallBack</span><span class="token punctuation">(</span><span class="token string">'mapData'</span><span class="token punctuation">)</span><span class="token comment">//销毁组件时注销实例化对象上的方法</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><h2 id="js形式封装websocket"><a href="#js形式封装websocket" class="header-anchor">#</a> js形式封装websocket</h2> <ul><li>在项目中定义一个socket.js文件，在需要建立socket的页面引入此js文件</li> <li>设置了心跳包防止链接中断</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>      <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+      <span class="token keyword">import</span> <span class="token punctuation">{</span> Message <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'element-ui'</span>
+      <span class="token keyword">let</span> v <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      v<span class="token punctuation">.</span>$message <span class="token operator">=</span> Message<span class="token punctuation">;</span>
+      <span class="token keyword">var</span> webSocket <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      <span class="token keyword">var</span> isConnect <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//连接状态</span>
+      <span class="token keyword">var</span> globalCallback <span class="token comment">//定义外部接收数据的回调函数</span>
+      <span class="token keyword">var</span> reConnectNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span><span class="token comment">//重连次数</span>
+
+      <span class="token comment">//var websocketUrl =  process.env.VUE_APP_API_WEBSOCKET_URL;</span>
+
+
+    <span class="token comment">//______________________________________________________________________________________________________________________</span>
+      <span class="token comment">//心跳设置</span>
+      <span class="token keyword">var</span> heartCheck <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">heartbeatData</span><span class="token operator">:</span><span class="token string">'心跳内容'</span><span class="token punctuation">,</span><span class="token comment">//心跳包</span>
+          <span class="token literal-property property">timeout</span><span class="token operator">:</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token comment">//每段时间发送一次心跳包 这里设置为60s</span>
+          <span class="token literal-property property">heartbeatTimer</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">//延时发送消息对象（启动心跳新建这个对象，收到消息后重置对象）</span>
+          <span class="token function-variable function">start</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span>heartbeatTimer <span class="token operator">=</span> <span class="token function">setInterval</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>isConnect<span class="token punctuation">)</span><span class="token punctuation">{</span>
+                      <span class="token function">webSocketSend</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heartbeatData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>timeout<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">reset</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heartbeatTimer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">clear</span><span class="token operator">:</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token function">clearInterval</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>heartbeatTimer<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+    <span class="token comment">//______________________________________________________________________________________________________________________</span>
+      <span class="token comment">//初始化websocket</span>
+      <span class="token keyword">function</span> <span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token parameter">websocketUrl<span class="token punctuation">,</span>callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">//此callback为在其他地方调用时定义的接收socket数据的函数</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>callback<span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> callback <span class="token operator">==</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                  globalCallback <span class="token operator">=</span> callback <span class="token comment">//！！！！！！！！！！1·初始化的时候将处理数据函数放在这里    </span>
+              <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                  <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">&quot;callback is not a function&quot;</span><span class="token punctuation">)</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">&quot;WebSocket&quot;</span> <span class="token keyword">in</span> window<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              webSocket <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">WebSocket</span><span class="token punctuation">(</span>websocketUrl<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//创建socket对象</span>
+          <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+              <span class="token function">Message</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                  <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'该浏览器不支持websocket!'</span><span class="token punctuation">,</span>
+                  <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'warning'</span>
+              <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">return</span>
+          <span class="token punctuation">}</span>
+          <span class="token comment">//打开</span>
+          webSocket<span class="token punctuation">.</span><span class="token function-variable function">onopen</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">webSocketOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+          <span class="token comment">//收信</span>
+          webSocket<span class="token punctuation">.</span><span class="token function-variable function">onmessage</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">webSocketOnMessage</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">// ！！！！！！！！！！3`链接成功调用</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+          <span class="token comment">//关闭</span>
+          webSocket<span class="token punctuation">.</span><span class="token function-variable function">onclose</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">webSocketOnClose</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+          <span class="token comment">//连接发生错误的回调方法</span>
+          webSocket<span class="token punctuation">.</span><span class="token function-variable function">onerror</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">webSocketonError</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+
+        <span class="token comment">//______________________________________________________________________________________________________________________</span>
+      <span class="token comment">//连接socket建立时触发</span>
+      <span class="token keyword">function</span> <span class="token function">webSocketOpen</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;WebSocket连接成功&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment">//首次握手</span>
+          <span class="token function">webSocketSend</span><span class="token punctuation">(</span>heartCheck<span class="token punctuation">.</span>heartbeatData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          isConnect <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          heartCheck<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//建立连接后就启用心跳包，定时向服务端发送心跳保证链接</span>
+          reConnectNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">//客户端接收服务端数据时触发,e为接受的数据对象</span>
+      <span class="token keyword">function</span> <span class="token function">webSocketOnMessage</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;websocket信息:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span>
+          <span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//根据自己的需要对接收到的数据进行格式化</span>
+
+          <span class="token function">globalCallback</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//将data传给在外定义的接收数据的函数，至关重要。2·！！！！！！！建立连接就处理相关数据的函数</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">//socket关闭时触发</span>
+      <span class="token keyword">function</span> <span class="token function">webSocketOnClose</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          heartCheck<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          isConnect <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//断开后修改标识</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'webSocket已经关闭 (code：'</span> <span class="token operator">+</span> e<span class="token punctuation">.</span>code <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+
+          <span class="token comment">//被动断开，重新连接</span>
+          <span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>code <span class="token operator">==</span> <span class="token number">1006</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+              <span class="token keyword">if</span><span class="token punctuation">(</span>reConnectNum <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                  <span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token operator">++</span>reConnectNum<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
+                  v<span class="token punctuation">.</span><span class="token function">$message</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                      <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'websocket连接不上，请刷新页面或联系开发人员!'</span><span class="token punctuation">,</span>
+                      <span class="token literal-property property">type</span><span class="token operator">:</span> <span class="token string">'warning'</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">//连接发生错误的回调方法</span>
+      <span class="token keyword">function</span> <span class="token function">webSocketonError</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          heartCheck<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          isConnect <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> <span class="token comment">//断开后修改标识</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;WebSocket连接发生错误:&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">//发送数据</span>
+      <span class="token keyword">function</span> <span class="token function">webSocketSend</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          webSocket<span class="token punctuation">.</span><span class="token function">send</span><span class="token punctuation">(</span><span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//在这里根据自己的需要转换数据格式</span>
+      <span class="token punctuation">}</span>
+
+
+    <span class="token comment">//____________________________________________________________________________________________________________________________</span>
+
+      <span class="token comment">//组件内需要socket地方主动关闭socket</span>
+      <span class="token keyword">function</span> <span class="token function">closeWebSocket</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          webSocket<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          heartCheck<span class="token punctuation">.</span><span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          isConnect <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+          reConnectNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">//组件内需要socket地方调用的函数，用来发送数据及接受数据</span>
+      <span class="token keyword">function</span> <span class="token function">sendSock</span><span class="token punctuation">(</span><span class="token parameter">agentData</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment">//下面的判断主要是考虑到socket连接可能中断或者其他的因素，可以重新发送此条消息。</span>
+          <span class="token keyword">switch</span> <span class="token punctuation">(</span>webSocket<span class="token punctuation">.</span>readyState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token comment">//CONNECTING：值为0，表示正在连接。</span>
+              <span class="token keyword">case</span> webSocket<span class="token punctuation">.</span><span class="token constant">CONNECTING</span><span class="token operator">:</span>
+                  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token function">sendSock</span><span class="token punctuation">(</span>agentData<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token comment">//OPEN：值为1，表示连接成功，可以通信了。</span>
+              <span class="token keyword">case</span> webSocket<span class="token punctuation">.</span><span class="token constant">OPEN</span><span class="token operator">:</span>
+                  <span class="token function">webSocketSend</span><span class="token punctuation">(</span>agentData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token comment">//CLOSING：值为2，表示连接正在关闭。</span>
+              <span class="token keyword">case</span> webSocket<span class="token punctuation">.</span><span class="token constant">CLOSING</span><span class="token operator">:</span>
+                  <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      <span class="token function">sendSock</span><span class="token punctuation">(</span>agentData<span class="token punctuation">,</span> callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token comment">//CLOSED：值为3，表示连接已经关闭，或者打开连接失败。</span>
+              <span class="token keyword">case</span> webSocket<span class="token punctuation">.</span><span class="token constant">CLOSED</span><span class="token operator">:</span>
+              <span class="token comment">// do something</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+              <span class="token keyword">default</span><span class="token operator">:</span>
+              <span class="token comment">// this never happens</span>
+              <span class="token keyword">break</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+        initWebSocket<span class="token punctuation">,</span>
+        closeWebSocket<span class="token punctuation">,</span>
+        sendSock<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="组件内"><a href="#组件内" class="header-anchor">#</a> 组件内</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> socketApi1 <span class="token keyword">from</span> <span class="token string">&quot;./utils/socket&quot;</span><span class="token punctuation">;</span><span class="token comment">//找到封装的socket.js文件</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+     <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token comment">// 建立socket连接， 并设置socket信息返回接受函数   </span>
+       socketApi1<span class="token punctuation">.</span><span class="token function">initWebSocket</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>websocketUrl<span class="token punctuation">,</span><span class="token keyword">this</span><span class="token punctuation">.</span>dealSocketData<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token function">beforeDestroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      socketApi1<span class="token punctuation">.</span><span class="token function">closeWebSocket</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token function">methods</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token comment">// socket信息返回接受函数</span>
+       <span class="token function">dealSocketData</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span><span class="token punctuation">,</span>
+       <span class="token comment">//发送socket信息</span>
+       <span class="token function">websocketSend</span><span class="token punctuation">(</span><span class="token parameter">data</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         socketApi1<span class="token punctuation">.</span><span class="token function">sendSock</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">最近更新:</span> <span class="time">2022-12-21 15:43</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/project/component.html" class="prev">
+        组件封装
+      </a></span> <!----></p></div>  <!----></main></div><div class="global-ui"><!----></div></div>
+    <script src="/blog/assets/js/app.58c6e035.js" defer></script><script src="/blog/assets/js/7.ed085243.js" defer></script><script src="/blog/assets/js/2.24c2bd5b.js" defer></script><script src="/blog/assets/js/27.aaf0e2b2.js" defer></script>
+  </body>
+</html>
