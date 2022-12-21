@@ -114,4 +114,4 @@ console.log($store);
 ```
 + vuex结构
 通过打印获取vuex的$store目录结构
-![$store目录结构](/assets/img/vuex.jpg)
+![$store目录结构](/blog/assets/img/vuex.jpg)

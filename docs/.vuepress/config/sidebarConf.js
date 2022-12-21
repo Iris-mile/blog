@@ -66,7 +66,8 @@ module.exports = {
       'vue2',
       'vuex',
       'class',
-      'component'
+      'component',
+      'websocket'
     ]
   }, ],
   '/js/': [{

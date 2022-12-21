@@ -10,7 +10,7 @@ title: 业务需求1
 - 分页切换对默认勾选和性能优化的处理
 
 **ui效果图如下：**
-![ui图](/assets/img/project1-1.jpg)
+![ui图](/blog/assets/img/project1-1.jpg)
 
 ### 所用到函数和字段介绍
  + 表格绑定属性:row-key="getRowKey"，用于分页切换表格记忆之前选中

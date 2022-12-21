@@ -18,6 +18,15 @@ findIndex找到元素的下标，没有就返回-1
 数组中有一个满足条件就返回true
 ```js
  const hasPermission = store.state.user.userMenus.some(item => item.menuName === to.meta.title)
+
+handleCheckLocation(locationList) {
+      const isEmpty = locationList.some(item => !item.planId || !item.checkContent)
+      if (isEmpty) {
+        this.$message.warning('请选择位置或检测内容')
+        return false
+      } else {
+        return true
+      }
 ```
 
 ## sort
